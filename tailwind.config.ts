@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				fire: 'hsl(var(--fire))',
+				'fire-glow': 'hsl(var(--fire-glow))',
+				charcoal: 'hsl(var(--charcoal))',
+				obsidian: 'hsl(var(--obsidian))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +88,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fire-glow': {
+					'0%, 100%': {
+						filter: 'drop-shadow(0 0 20px hsl(var(--fire) / 0.6))'
+					},
+					'50%': {
+						filter: 'drop-shadow(0 0 40px hsl(var(--fire) / 0.8))'
+					}
+				},
+				'rise': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(40px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fire-glow': 'fire-glow 2s ease-in-out infinite',
+				'rise': 'rise 0.8s ease-out'
+			},
+			fontSize: {
+				'hero': 'var(--font-size-hero)',
+				'title': 'var(--font-size-title)',
+				'subtitle': 'var(--font-size-subtitle)'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
 			}
 		}
 	},
