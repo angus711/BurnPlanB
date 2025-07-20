@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/BurnPlanB/", // ← THIS IS CRUCIAL FOR GITHUB PAGES
+  base: "/",  // <-- Change this to "/" for root domain deployment
   server: {
     host: "::",
     port: 8080,
